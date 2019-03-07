@@ -10,7 +10,14 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      '/api':{
+        target:'http://localhost:8080',
+        pathRewrite:{
+          '^/api':'/static/mock'
+        }//这里提供了axios转发机制，可以把代码中所有的axios请求先在此处进行一次转发，将'/api'转发到服务器地址上，将'/api'开头的地址替换到所要前往的页面的地址
+      }
+    },
 
     // Various Dev Server settings
     host: 'localhost', // can be overwritten by process.env.HOST
@@ -20,7 +27,7 @@ module.exports = {
     notifyOnErrors: true,
     poll: false, // https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-
 
-    
+
     /**
      * Source Maps
      */

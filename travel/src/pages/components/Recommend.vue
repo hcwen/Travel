@@ -17,12 +17,11 @@
 <script>
 export default {
   name:'HomeRecommend',
+  props:{
+    recommendList:Array
+  },
   data(){
     return {
-      recommendList:[
-        {id:'0001',imgUrl:'http://img1.qunarzz.com/sight/p0/1409/19/adca619faaab0898245dc4ec482b5722.jpg_140x140_80f63803.jpg',title:'故宫',desc:'千年紫禁城'},
-        {id:'0002',imgUrl:'http://img1.qunarzz.com/sight/p0/1511/d2/d2aec2dfc5aa771290.water.jpg_140x140_abb362a7.jpg',title:'滑雪场',desc:'刺激战场'}
-      ]
     }
   }
 }
