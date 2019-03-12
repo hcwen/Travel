@@ -15,8 +15,8 @@
 </template>
 
 <script>
-import 'swiper/dist/css/swiper.css'
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
+// import 'swiper/dist/css/swiper.css'
+// import { swiper, swiperSlide } from 'vue-awesome-swiper'
 export default {
   name:'HomeIcons',
   props:{
@@ -30,10 +30,10 @@ export default {
       }
     }
   },
-  components: {
-    swiper,
-    swiperSlide
-  },
+  // components: {
+  //   swiper,
+  //   swiperSlide
+  // },
   computed:{
         pages () {
           const pages = []

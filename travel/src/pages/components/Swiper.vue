@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption" v-if="swiperList.length">
+    <swiper :options="swiperOption" v-if="showSwiper">
         <!-- slides -->
         <swiper-slide v-for="item of swiperList" :key="item.id" >
           <img  class="swiper-img" :src="item.imgUrl"/>
@@ -11,8 +11,8 @@
 </template>
 
 <script>
-import 'swiper/dist/css/swiper.css'
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
+// import 'swiper/dist/css/swiper.css'
+// import { swiper, swiperSlide } from 'vue-awesome-swiper'
 export default {
   name:'HomeSwiper',
   props:{
@@ -22,14 +22,22 @@ export default {
     return {
       swiperOption:{
         pagination:'.swiper-pagination',
-        loop:true
+        loop:true,
+        autoplay : 600,
+        autoplayDisableOnInteraction: false
       },
     }
   },
-  components: {
-    swiper,
-    swiperSlide
-   }
+  computed:{
+    showSwiper(){
+      return this.swiperList.length;
+    }
+  }
+
+  // components: {
+  //   swiper,
+  //   swiperSlide
+  //  }
 }
 </script>
 
