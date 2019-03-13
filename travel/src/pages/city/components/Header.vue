@@ -15,7 +15,7 @@ export default {
 .header
   position:relative
   overflow:hidden
-  height: 0.86rem
+  height: .86rem
   line-height :.86rem
   text-align:center
   color:#fff
