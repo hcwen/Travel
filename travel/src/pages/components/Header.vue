@@ -25,10 +25,10 @@ export default {
   data () {
     return {
     }
-  },
-  computed:{
+  },computed:{
     ...mapState(['city'])
-  }
+  },
+
 }
 </script>
 
