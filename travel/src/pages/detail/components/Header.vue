@@ -42,7 +42,10 @@ export default {
   },
   activated(){
     window.addEventListener('scroll',this.handleScroll)
-  }
+  },
+  deactivated(){
+     window.removeEventListener('scorll',this.handleScroll)
+  }//对全局事件的解绑
 
 }
 </script>

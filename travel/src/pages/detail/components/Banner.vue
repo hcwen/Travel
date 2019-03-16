@@ -11,16 +11,19 @@
       </div>
     </div>
   </div>
-  <common-grallary
-  :imgs="imgs"
-  v-show="grallaryImg"
-  @close="handGarrlaryClick"
-  ></common-grallary>
+  <fade>
+    <common-grallary
+    :imgs="imgs"
+    v-show="grallaryImg"
+    @close="handGarrlaryClick"
+    ></common-grallary>
+  </fade>
 </div>
 </template>
 
 <script>
 import CommonGrallary from '@/common/grallary/Grallary'
+import Fade from '@/common/Fade/Fade'
 export default {
   name:'DetailBanner',
   props:{
@@ -33,7 +36,8 @@ export default {
     }
   },
   components:{
-    CommonGrallary
+    CommonGrallary,
+    Fade
   },
   methods:{
     grallaryClick(){
