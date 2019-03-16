@@ -59,7 +59,9 @@ export default {
     })
   },
   mounted(){
-    this.scroll = new Bscroll(this.$refs.wrapper)
+    this.scroll = new Bscroll(this.$refs.wrapper, {
+      click: true
+    })
   },
   watch:{
     letter(){
@@ -71,7 +73,7 @@ export default {
   },
   methods:{
     handleCityClick(city){
-      // this.$store.commit('changeCity',city)
+      // this.$store.commit('changeCity',city
       this.changeCity(city)
        this.$router.push("/")
     },
